@@ -1,4 +1,4 @@
-# White Search
+# 🔍 White Search
 
 A production-style Retrieval-Augmented Generation (RAG) system built on an event-driven architecture. Users upload documents through a web interface; the backend processes them asynchronously via Kafka, persists workflow state in MongoDB, stores vector embeddings in Pinecone, and serves grounded answers through a Gemini-powered query layer.
 
@@ -54,7 +54,7 @@ Client (Streamlit)
 - LLM-generated answers grounded in retrieved context
 - Streamlit frontend with upload, query, and status pages
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 RAG/
@@ -85,7 +85,7 @@ RAG/
 | **Stateful workflow** | MongoDB maintains a document per user tracking completed stages. Workers append stage entries as they finish, giving clients a reliable view of pipeline progress. |
 | **MongoDB** | Stores `{ user_id, stages: [{ stage, status }] }` — the single source of truth for ingestion state across all microservices. |
 
-## Environment Variables
+## 🔑 Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -118,7 +118,7 @@ This project uses [Aiven](https://aiven.io/) for managed Kafka with SSL authenti
 
 Point each env variable to the absolute path of the downloaded file on your machine.
 
-## Getting Started
+## 🚀 Getting Started
 
 **1. Create and activate a virtual environment**
 
@@ -167,7 +167,7 @@ Scripts are defined in `rav.yaml`. List all available commands with:
 rav run
 ```
 
-**4. Open the app**
+**4. Open the app** 🌐
 
 - API docs → [http://localhost:8000/docs](http://localhost:8000/docs)
 - Frontend → [http://localhost:8501](http://localhost:8501)
