@@ -51,5 +51,3 @@ class QueryLLM:
         except Exception as e:
             print(f"Error querying LLM: {e}")
             return "Sorry, I can't answer that question"
-
-

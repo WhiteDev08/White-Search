@@ -1,6 +1,7 @@
 from confluent_kafka import Consumer
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from pinecone import Pinecone
+from langchain_core.documents import Document
+from langchain_pinecone import PineconeVectorStore
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -25,12 +26,6 @@ embeddings = GoogleGenerativeAIEmbeddings(
     model="models/gemini-embedding-001"
 )
 
-pc = Pinecone(
-    api_key=os.getenv("PINECONE_API_KEY")
-)
-
-index = pc.Index(os.getenv("INDEX_NAME"))
-
 async def main():
     while True:
 
@@ -44,17 +39,17 @@ async def main():
         user_id = data["user_id"]
         chunks = data["chunks"]
 
-        vectors = embeddings.embed_documents([c["chunk_text"] for c in chunks])
+        documents = [
+            Document(page_content=chunk["chunk_text"], metadata={"user_id": user_id})
+            for chunk in chunks
+        ]
+        ids = [f"{user_id}_{chunk['chunk_id']}" for chunk in chunks]
 
-        index.upsert(
-            vectors=[
-                {
-                    "id": chunk["chunk_id"],
-                    "values": vector,
-                    "metadata": {"text": chunk["chunk_text"]}
-                }
-                for chunk, vector in zip(chunks, vectors)
-            ]
+        PineconeVectorStore.from_documents(
+            documents,
+            embedding=embeddings,
+            index_name=os.getenv("INDEX_NAME"),
+            ids=ids,
         )
 
         document = await get_document(user_id)
