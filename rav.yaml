@@ -1,0 +1,8 @@
+scripts:
+  server: uvicorn src.main:app --host 0.0.0.0 --port 8000
+  frontend: streamlit run frontend/app.py
+  ingestion: python src/microservices/ingestion.py
+  embedding: python src/microservices/embedding.py
+  chunking: python src/microservices/chunking.py
+  docker: docker build -f Dockerfile -t rag .
+  docker-run: docker run -p 8000:8000 -p 8501:8501 --env-file .env rag

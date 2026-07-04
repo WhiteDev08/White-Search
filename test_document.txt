@@ -1,0 +1,573 @@
+# ACME Research Institute
+## Employee Handbook & Knowledge Base
+Version: 3.2
+Last Updated: January 2025
+
+==================================================
+SECTION 1: COMPANY OVERVIEW
+==================================================
+
+ACME Research Institute (ARI) was founded in 2014 in Seattle, Washington.
+The company specializes in Artificial Intelligence, Machine Learning,
+Computer Vision, and Natural Language Processing.
+
+Mission:
+"Build trustworthy AI systems that improve human productivity."
+
+Core Values:
+1. Integrity
+2. Innovation
+3. Customer Success
+4. Continuous Learning
+5. Transparency
+
+Current CEO:
+Dr. Emily Carter
+
+Number of Employees:
+1,240
+
+Offices:
+- Seattle (HQ)
+- Austin
+- Toronto
+- London
+- Singapore
+
+==================================================
+SECTION 2: DEPARTMENTS
+==================================================
+
+Engineering
+Director: Sarah Johnson
+
+Responsibilities:
+- Backend Services
+- Frontend Applications
+- DevOps
+- Infrastructure
+- Security
+
+----------------------------------
+
+Research
+Director: Michael Chen
+
+Responsibilities:
+- Large Language Models
+- Reinforcement Learning
+- Computer Vision
+- Robotics
+
+----------------------------------
+
+Human Resources
+
+Director:
+Jennifer Adams
+
+Responsibilities:
+- Recruitment
+- Payroll
+- Employee Relations
+- Benefits
+- Training
+
+----------------------------------
+
+Sales
+
+Director:
+Robert Kim
+
+Regions:
+- North America
+- Europe
+- Asia-Pacific
+
+==================================================
+SECTION 3: EMPLOYEE BENEFITS
+==================================================
+
+Health Insurance:
+Provider: Blue Shield
+Coverage:
+- Medical
+- Dental
+- Vision
+
+Vacation:
+20 paid vacation days
+
+Sick Leave:
+12 days annually
+
+Remote Work:
+Employees may work remotely up to 3 days per week.
+
+Retirement:
+401(k) matching:
+Company matches up to 6%.
+
+Learning Budget:
+$2,500 annually.
+
+Gym Reimbursement:
+Up to $60/month.
+
+==================================================
+SECTION 4: ENGINEERING STANDARDS
+==================================================
+
+Preferred Languages:
+- Python
+- Go
+- TypeScript
+- Rust
+
+Databases:
+- PostgreSQL
+- Redis
+- MongoDB
+
+Cloud:
+AWS
+
+Primary AWS Services:
+- EC2
+- S3
+- Lambda
+- RDS
+- ECS
+
+Containerization:
+Docker
+
+Orchestration:
+Kubernetes
+
+CI/CD:
+GitHub Actions
+
+Monitoring:
+Prometheus
+Grafana
+
+Logging:
+Elastic Stack
+
+==================================================
+SECTION 5: AI PLATFORM
+==================================================
+
+Current Production LLM:
+Atlas-7B
+
+Embedding Model:
+EmbedX-1024
+
+Vector Database:
+Qdrant
+
+Chunk Size:
+512 tokens
+
+Chunk Overlap:
+64 tokens
+
+Retrieval:
+Hybrid Search
+
+Ranking:
+Cross Encoder Re-ranker
+
+Maximum Retrieved Chunks:
+8
+
+LLM Temperature:
+0.2
+
+==================================================
+SECTION 6: PROJECTS
+==================================================
+
+Project Orion
+
+Started:
+March 2023
+
+Purpose:
+Enterprise Document Search
+
+Lead:
+Alice Brown
+
+Tech Stack:
+FastAPI
+Kafka
+Qdrant
+PostgreSQL
+
+Status:
+Production
+
+----------------------------------
+
+Project Atlas
+
+Started:
+August 2022
+
+Purpose:
+Internal AI Assistant
+
+Lead:
+David Miller
+
+Status:
+Production
+
+Models:
+Atlas-7B
+EmbedX-1024
+
+----------------------------------
+
+Project Neptune
+
+Started:
+May 2024
+
+Purpose:
+Image Understanding
+
+Lead:
+Sophia Wilson
+
+Status:
+Beta
+
+==================================================
+SECTION 7: SECURITY POLICIES
+==================================================
+
+Password Rules:
+Minimum Length: 14 characters
+
+Rotation:
+Every 180 days
+
+MFA:
+Required
+
+Allowed Authentication:
+- Password
+- Passkey
+- SSO
+
+Encryption:
+AES-256
+
+Transport:
+TLS 1.3
+
+==================================================
+SECTION 8: INCIDENT RESPONSE
+==================================================
+
+Severity Levels
+
+P1
+Critical production outage
+
+Response Time:
+15 minutes
+
+P2
+Major degradation
+
+Response Time:
+1 hour
+
+P3
+Minor issue
+
+Response Time:
+8 hours
+
+P4
+Low priority
+
+Response Time:
+48 hours
+
+==================================================
+SECTION 9: PRODUCT CATALOG
+==================================================
+
+Product:
+SearchAI
+
+Version:
+4.2
+
+Features:
+- Semantic Search
+- Keyword Search
+- OCR
+- PDF Parsing
+
+----------------------------------
+
+Product:
+VisionPro
+
+Version:
+2.5
+
+Features:
+- Image Captioning
+- OCR
+- Object Detection
+
+----------------------------------
+
+Product:
+ChatAssist
+
+Version:
+5.1
+
+Features:
+- Chat
+- Summarization
+- Translation
+- RAG
+
+==================================================
+SECTION 10: IMPORTANT DATES
+==================================================
+
+2014
+Company Founded
+
+2018
+Reached 100 Employees
+
+2020
+Remote-first policy introduced
+
+2022
+Project Atlas launched
+
+2023
+Project Orion launched
+
+2024
+Project Neptune announced
+
+==================================================
+SECTION 11: TROUBLESHOOTING FAQ
+==================================================
+
+Q:
+What should I do if Kafka is unavailable?
+
+Answer:
+Check broker health, verify network connectivity,
+restart consumers if necessary, and inspect topic
+partitions.
+
+----------------------------------
+
+Q:
+What should I do if embeddings are missing?
+
+Answer:
+Re-run the embedding pipeline,
+verify EmbedX-1024 service health,
+confirm vectors exist in Qdrant.
+
+----------------------------------
+
+Q:
+How do I reset MFA?
+
+Answer:
+Open an IT ticket and verify identity with HR.
+
+==================================================
+SECTION 12: RANDOM FACTS
+==================================================
+
+The cafeteria serves lunch from
+11:30 AM to 2:00 PM.
+
+Friday is "Innovation Day."
+
+Quarterly town halls occur on
+the first Thursday of every quarter.
+
+The internal wiki contains over
+18,000 pages.
+
+The engineering Slack workspace has
+over 350 public channels.
+
+==================================================
+SECTION 13: TABLE
+==================================================
+
+Employee ID | Name           | Department   | Location
+-------------------------------------------------------
+1001        | Alice Brown    | Engineering  | Seattle
+1002        | David Miller   | Research     | Austin
+1003        | Jennifer Adams | HR           | Seattle
+1004        | Robert Kim     | Sales        | Toronto
+1005        | Sophia Wilson  | Research     | London
+1006        | Sarah Johnson  | Engineering  | Seattle
+1007        | Michael Chen   | Research     | Singapore
+
+==================================================
+SECTION 14: QUIZ
+==================================================
+
+Question 1:
+Who is the CEO?
+
+Answer:
+Dr. Emily Carter
+
+----------------------------------
+
+Question 2:
+Which project uses Kafka?
+
+Answer:
+Project Orion
+
+----------------------------------
+
+Question 3:
+What vector database is used?
+
+Answer:
+Qdrant
+
+----------------------------------
+
+Question 4:
+How many vacation days are provided?
+
+Answer:
+20
+
+----------------------------------
+
+Question 5:
+Which project is currently in Beta?
+
+Answer:
+Project Neptune
+
+----------------------------------
+
+Question 6:
+Who leads Project Atlas?
+
+Answer:
+David Miller
+
+----------------------------------
+
+Question 7:
+Which cloud platform is used?
+
+Answer:
+AWS
+
+----------------------------------
+
+Question 8:
+What is the maximum number of retrieved chunks?
+
+Answer:
+8
+
+----------------------------------
+
+Question 9:
+What is the password minimum length?
+
+Answer:
+14 characters
+
+----------------------------------
+
+Question 10:
+What encryption algorithm is used?
+
+Answer:
+AES-256
+
+==================================================
+SECTION 15: MULTI-HOP QUESTIONS
+==================================================
+
+1.
+Which director leads the department responsible for
+Large Language Models?
+
+Answer:
+Michael Chen
+
+2.
+Which project uses the same embedding model as the
+AI platform?
+
+Answer:
+Project Atlas
+
+3.
+Which employee works in the department responsible
+for Reinforcement Learning and is located in London?
+
+Answer:
+Sophia Wilson
+
+4.
+Which product includes RAG functionality?
+
+Answer:
+ChatAssist
+
+5.
+Which office hosts the CEO?
+
+Answer:
+Seattle Headquarters
+
+==================================================
+SECTION 16: EDGE CASES
+==================================================
+
+The codename "Phoenix" refers to an internal migration
+project and is NOT a product.
+
+Atlas refers to both:
+- Project Atlas
+- Atlas-7B model
+
+SearchAI and semantic search are related,
+but SearchAI is the product name.
+
+EmbedX-1024 is an embedding model,
+not a language model.
+
+Qdrant stores vectors.
+PostgreSQL stores relational data.
+Redis is used primarily for caching.
+
+==================================================
+END OF DOCUMENT
+==================================================
