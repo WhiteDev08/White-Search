@@ -175,3 +175,11 @@ rav run
 ---
 
 This project is a practical reference for wiring together modern AI infrastructure — not a toy script, but a working pattern you can extend. The separation between API, workers, state store, and vector DB is intentional: it mirrors how production RAG systems handle scale, fault tolerance, and observability. Use it as a starting point to experiment with additional stages, retry logic, dead-letter queues, or deployment to containers.
+
+---
+### 🚀 Implementation
+
+<img width="1423" height="491" alt="image" src="https://github.com/user-attachments/assets/e762c6fd-1912-4238-996d-88cfff074cf2" />
+<img width="1462" height="827" alt="image" src="https://github.com/user-attachments/assets/91a4ceac-3e14-4656-aedb-80e86b1161e4" />
+<img width="1397" height="813" alt="image" src="https://github.com/user-attachments/assets/d3900203-f9e4-431d-abe9-59b36a63ec9b" />
+<img width="1420" height="813" alt="image" src="https://github.com/user-attachments/assets/55af6cb9-f5cf-4a37-b1df-5c9d1fff858f" />
