@@ -54,6 +54,8 @@ Client (Streamlit)
 - LLM-generated answers grounded in retrieved context
 - Streamlit frontend with upload, query, and status pages
 
+Failure recovery (retries, dead-letter queues, idempotent replays) is **not implemented** for now — the event-driven layout is set up so these can be extended later.
+
 ## 📁 Project Structure
 
 ```
@@ -84,6 +86,17 @@ RAG/
 | **Async orchestration** | The upload endpoint returns before processing finishes. Long-running steps (load, split, embed) execute in background workers, coordinated by events rather than synchronous chains. |
 | **Stateful workflow** | MongoDB maintains a document per user tracking completed stages. Workers append stage entries as they finish, giving clients a reliable view of pipeline progress. |
 | **MongoDB** | Stores `{ user_id, stages: [{ stage, status }] }` — the single source of truth for ingestion state across all microservices. |
+
+## Multi-document vector storage
+
+All uploads share a **single Pinecone index**. Pinecone identifies vectors by ID, not by document — so chunk IDs must be unique across the whole index, not just within one upload.
+
+The embedding service stores each chunk via `PineconeVectorStore.from_documents` with:
+
+- **Vector ID:** `{user_id}_{chunk_index}` (e.g. `ke_1234_0`, `ke_1234_1`) — prevents different uploads from overwriting each other
+- **Metadata:** chunk text and `user_id` for traceability
+
+Query retrieval is **global**: `/chat` runs similarity search across the entire index, so answers can draw from any uploaded document. Re-uploading under the same `user_id` replaces that user's previous vectors at the same IDs.
 
 ## 🔑 Environment Variables
 
