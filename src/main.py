@@ -53,16 +53,19 @@ async def get_status(user_id:str):
 
     try:
         document=await get_document(user_id)
-        
-    except Exception as e:
-        print(f"Error getting document: {e}")
-        return{
-            "Status":"Error getting document"
+
+        if document:
+            return{
+            "Status":document["stages"]
         }
 
-    return{
-        "Status":document["stages"]
-    }
+        raise ValueError()
+        
+    except ValueError as e:
+        return{
+            "Status":"Document not found!"
+        }
+
 
 @app.post("/chat")
 async def chat(query:str):

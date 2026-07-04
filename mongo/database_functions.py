@@ -19,8 +19,12 @@ async def get_document(user_id):
     try:
         print(f"Getting document for user {user_id}")
         document = collection.find_one({"user_id":user_id})
-        print(f"Document found!")
-        return document
+        if document:
+            print(f"Document found!")
+            return document
+        
+        print("Document not found!")
+        return None
     
     except Exception as e:
         print(f"Error getting document for user {user_id}: {e}")
